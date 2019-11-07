@@ -11,8 +11,9 @@ namespace BlueprintTracker
 {
 	class BlueprintTrackerIcon : MonoBehaviour
 	{
-		public const float Width = BlueprintTrackerEntry.Height;
-		public const float IconWidth = 50;
+#warning these width constants should be dynamically calculated!
+        public static float Width { get { return BlueprintTrackerEntry.Height; } }
+		public static float IconWidth { get { return Mod.config.IconWidth; /* 50 */ } }
 		public const string IngredientColorGood = "#94DE00FF";
 		public const string IngredientColorBad = "#DF4026FF";
 
@@ -126,7 +127,9 @@ namespace BlueprintTracker
 				bool hasEnough = currentAmount >= required;
 
 				text.color = hasEnough ? goodColor : badColor;
-				text.text = string.Format("{0}/{1}", Math.Min(currentAmount, required), required);
+
+                int displayAmount = (Mod.config.ShowExcessAmounts ? currentAmount : Math.Min(currentAmount, required));
+				text.text = string.Format("{0}/{1}", displayAmount, required);
 			}
 		}
 

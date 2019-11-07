@@ -2,20 +2,26 @@
   "Id": "BlueprintTracker",
   "DisplayName": "BlueprintTracker",
   "Author": "RandyKnapp",
-  "Version": "1.1.2",
+  "Version": "1.1.2.1",
   "Requires": [ "0Harmony-1.2.0.1.dll" ],
   "Enable": true,
   "AssemblyName": "BlueprintTracker.dll",
   "EntryMethod": "BlueprintTracker.QPatch.Patch",
   "Config": {
-    "MaxPinnedBlueprints": 13,
+    "EntrySpacing": 5,
+    "EntryHeight": 70.0,
+    "IconSpacing": -6.0,
+    "IconWidth": 50.0,
+
+    "MaxPinnedBlueprints": 100, // 13
     "Position": "TopRight",
-    "CornerOffsetX": 20,
-    "CornerOffsetY": 20,
-    "TrackerScale": 1.0,
-    "FontSize": 16,
+    "CornerOffsetX": 5, // 20
+    "CornerOffsetY": 5, // 20
+    "TrackerScale": 0.7, // 1.0
+    "FontSize": 16, // 16
     "BackgroundAlpha": 0.5,
-    "ShowWhilePiloting": true,
-    "ColorblindMode": false
+    "ShowWhilePiloting": false,
+    "ColorblindMode": false,
+    "ShowExcessAmounts":  true
   }
 }

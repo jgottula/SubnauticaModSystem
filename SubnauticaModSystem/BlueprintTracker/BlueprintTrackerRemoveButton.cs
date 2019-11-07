@@ -10,7 +10,7 @@ namespace BlueprintTracker
 {
 	class BlueprintTrackerRemoveButton : MonoBehaviour
 	{
-		public const float Width = BlueprintTrackerEntry.Height;
+		public static float Width { get { return BlueprintTrackerEntry.Height; } }
 
 		private TechType techType;
 		private LayoutElement layout;

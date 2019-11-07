@@ -9,9 +9,9 @@ namespace BlueprintTracker
 {
 	class BlueprintTracker : MonoBehaviour
 	{
-		public const float Spacing = 10;
-		public const float Width = 500;
-		public const float Height = (BlueprintTrackerEntry.Height * Mod.MaxPins) + (Spacing * (Mod.MaxPins - 1));
+		public static float Spacing { get { return Mod.config.EntrySpacing; } }
+		public static float Width = 500;
+        public static float Height { get { return (BlueprintTrackerEntry.Height * Mod.MaxPins) + (Spacing * (Mod.MaxPins - 1)); } }
 
 		private static BlueprintTracker instance;
 		public static Action onTrackingChanged = delegate { };
@@ -121,7 +121,7 @@ namespace BlueprintTracker
 			layout.childControlHeight = true;
 			layout.childForceExpandHeight = false;
 			layout.childForceExpandWidth = true;
-			layout.padding = new RectOffset(10, 10, 10, 10);
+			layout.padding = new RectOffset(0, 0, 0, 0);
 		}
 
 		private void Update()

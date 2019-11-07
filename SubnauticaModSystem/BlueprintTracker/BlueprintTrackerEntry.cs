@@ -9,8 +9,10 @@ namespace BlueprintTracker
 {
 	class BlueprintTrackerEntry : MonoBehaviour
 	{
-		public const float Height = 70;
-		public const float IconSpacing = -6;
+#warning Height needs to be dynamically calculated!
+        public static float Height { get { return Mod.config.EntryHeight; /* 70 */ } }
+#warning IconSpacing should be dynamically calculated and/or pulled from a Config value!
+        public static float IconSpacing { get { return Mod.config.IconSpacing; /* -6 */ } }
 
 		private LayoutElement layout;
 		private HorizontalLayoutGroup contents;

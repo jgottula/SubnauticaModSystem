@@ -13,7 +13,7 @@ namespace BlueprintTracker
 	static class Mod
 	{
 		public const string SaveDataFilename = "BlueprintTrackerSave.json";
-		public const int MaxPins = 13;
+		public const int MaxPins = 1000;
 		public const int MinPins = 1;
 
 		public static Config config;
@@ -84,7 +84,7 @@ namespace BlueprintTracker
 			}
 
 			ModUtils.ValidateConfigValue("TrackerScale", 0.01f, 5.0f, ref config, ref defaultConfig);
-			ModUtils.ValidateConfigValue("FontSize", 10, 60, ref config, ref defaultConfig);
+			ModUtils.ValidateConfigValue("FontSize", 1, 60, ref config, ref defaultConfig);
 			ModUtils.ValidateConfigValue("BackgroundAlpha", 0.0f, 1.0f, ref config, ref defaultConfig);
 		}
 
