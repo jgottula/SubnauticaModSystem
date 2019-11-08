@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>Always</RunPostBuildEvent>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony-1.2.0.1">
       <HintPath>D:\Steam\SteamApps\common\Subnautica\Subnautica_Data\Managed\0Harmony-1.2.0.1.dll</HintPath>
@@ -99,11 +96,4 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetPath) D:\SteamLibrary\steamapps\common\Subnautica\QMods\QuitToDesktop\ /q /y
-xcopy $(ProjectDir)mod.json D:\SteamLibrary\steamapps\common\Subnautica\QMods\QuitToDesktop\ /q /y
-
-xcopy $(TargetPath) D:\EpicGames\Subnautica\QMods\QuitToDesktop\ /q /y
-xcopy $(ProjectDir)mod.json D:\EpicGames\Subnautica\QMods\QuitToDesktop\ /q /y</PostBuildEvent>
-  </PropertyGroup>
 </Project>

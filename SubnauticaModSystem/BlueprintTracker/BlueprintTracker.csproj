@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>Always</RunPostBuildEvent>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony-1.2.0.1">
       <HintPath>D:\Steam\SteamApps\common\Subnautica\Subnautica_Data\Managed\0Harmony-1.2.0.1.dll</HintPath>
@@ -133,13 +130,4 @@
   <ItemGroup />
   <Import Project="..\Common\Common.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetPath) D:\SteamLibrary\steamapps\common\Subnautica\QMods\BlueprintTracker\ /q /y
-xcopy $(ProjectDir)mod.json D:\SteamLibrary\steamapps\common\Subnautica\QMods\BlueprintTracker\ /q /y
-xcopy $(ProjectDir)Assets D:\SteamLibrary\steamapps\common\Subnautica\QMods\BlueprintTracker\Assets\ /q /y
-
-xcopy $(TargetPath) D:\EpicGames\Subnautica\QMods\BlueprintTracker\ /q /y
-xcopy $(ProjectDir)mod.json D:\EpicGames\Subnautica\QMods\BlueprintTracker\ /q /y
-xcopy $(ProjectDir)Assets D:\EpicGames\Subnautica\QMods\BlueprintTracker\Assets\ /q /y</PostBuildEvent>
-  </PropertyGroup>
 </Project>
