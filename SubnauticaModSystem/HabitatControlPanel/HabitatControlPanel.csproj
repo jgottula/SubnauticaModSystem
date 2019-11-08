@@ -55,9 +55,6 @@
     <Reference Include="UnityEngine">
       <HintPath>D:\Steam\SteamApps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>D:\Steam\SteamApps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\Steam\SteamApps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>

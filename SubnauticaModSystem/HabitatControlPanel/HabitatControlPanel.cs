@@ -39,7 +39,7 @@ namespace HabitatControlPanel
 		private bool initialized;
 		private Constructable constructable;
 		private Equipment equipment;
-		private HabitatControlPanelSaveData saveData = new HabitatControlPanelSaveData();
+		private HabitatControlPanelSaveData saveData;
 		private PowerRelay connectedRelay;
 		private string habitatLabel = InitialHabitatLabel;
 		private int pingType = 0;
